@@ -1,0 +1,40 @@
+project_name: "titanic"
+
+experiment:
+  name: "titanic_survival_prediction"
+  type: "classification"
+
+data:
+  source: "data/raw/titanic.csv"
+  test_split: 0.2
+  seed: 0
+
+models:
+  baseline:
+    type: "DummyClassifier"
+    hyperparameters:
+      strategy: "most_frequent"
+      
+  svc:
+    type: "SVC"
+    hyperparameters:
+      C: 0.88846958447213
+      gamma: 0.006546585279494658
+      kernel: "rbf"
+
+  xgboost:
+    type: "XGBoost"
+    hyperparameters:
+      learning_rate: 0.09147223274189986
+      max_depth: 4
+      n_estimators: 94
+      subsample: 0.7
+      colsample_bytree: 0.7
+      min_child_weight: 4
+      gamma: 0.30728220870599987
+      reg_alpha: 0.10425438586231893
+      reg_lambda: 4.175797263045854
+
+output:
+  model_path: "models/"
+  logs_path: "logs/"
