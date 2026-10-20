@@ -42,17 +42,17 @@ MANIFEST
 *.swo
 .DS_Store
 
-# Dane i artefakty
+# Data
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# Lokalne artefakty MLflow 
+# Local MLflow artifacts
 mlruns/
 mlartifacts/
 
-# Bazy danych Optuny i lokalne foldery artefaktów treningowych
+# Optuna databases and local artifacts
 artifacts/
 src/artifacts/
 *.db
